@@ -49,8 +49,8 @@ def stats(request):
     Ground_count=Squirrel.objects.filter(Location="Ground Plane").count(),
     Above_count=Squirrel.objects.filter(Location="Above Ground").count(),
     context = {
-            'Total_Sightings': Total,
-            'Adult_Count': Adult_Count,
+            'Total': Total,
+            'Adult_count': Adult_count,
             'Juvenile_count': Juvenile_count,
             'Gray_count': Gray_count,
             'Cinnamon_count': Cinnamon_count,
