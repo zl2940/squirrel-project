@@ -5,36 +5,32 @@
         <title></title>
     </head>
     <body>
-        <ol>
-            <li>Latitude: {{ squirrel.X }}</li>
-	    <li>Longtitude: {{ squirrel.Y }}</li>
-	    <li>Unique_Squirrel_ID: {{ squirrel.Unique_squirrel_id }}</li>
-	    <li>Shift: {{ squirrel.Shift }}</li>
-	    <li>Date: {{ squirrel.Date }}</li>
-	    <li>Age: {{ squirrel.Age }}</li>
-	    <li>Primary Fur Color: {{ squirrel.Fur }}</li>
-	    <li>Location: {{ squirrel.Location }}</li>
-	    <li>Specific Location: {{ squirrel.Specific_location }}</li>
-	    <li>Running: {{ squirrel.Running }}</li>
-	    <li>Chasing: {{ squirrel.Chasing }}</li>
-	    <li>Climbing: {{ squirrel.Climbing }}</li>
-	    <li>Eating: {{ squirrel.Eating }}</li>
-	    <li>Foraging: {{ squirrel.Foraging }}</li>
-	    <li>Other Activities: {{ squirrel.Other_Activities }}</li>
-	    <li>Kuks: {{ squirrel.Kuks }}</li>
-	    <li>Quaas: {{ squirrel.Quaas }}</li>
-	    <li>Moans: {{ squirrel.Moans }}</li>
-	    <li>Tail Flags: {{ squirrel.Tail_Flags }}</li>
-	    <li>Tail Twitches: {{ squirrel.Tail_Twitches }}</li>
-	    <li>Approaches: {{ squirrel.Approaches }}</li>
-	    <li>Indifferent: {{ squirrel.Indifferent }}</li>
-	    <li>Runs From: {{ squirrel.Runs_From }}</li>
-	</ol>
-
-<br>
-        <a href='{% url 'sightings:update' Unique_squirrel_id=squirrel.Unique_squirrel_id%}'> Update the details</a>
-</br>
-        <a href='{% url 'sightings:index'%}'> Go to index page</a>
-
+	    <ol>
+		    <li>Longtitude: {{squirrel.X}}</li>
+		    <li>Latitude: {{squirrel.Y}}</li>
+		    <li>Unique squirrel ID: {{squirrel.Unique_Squirrel_ID}}</li>
+		    <li>Shift: {{squirrel.Shift}}</li>
+		    <li>Date: {{squirrel.Date}}</li>
+		    <li>Age: {{squirrel.Age}}</li>
+		    <li>Primary fur color: {{squirrel.Primary_Fur_Color}}</li>
+		    <li>Location: {{squirrel.Location}}</li>
+		    <li>Specific location: {{squirrel.Specific_Location}}</li>
+		    <li>Running: {{squirrel.Running}}</li>
+		    <li>Chasing: {{squirrel.Chasing}}</li>
+		    <li>Climbing: {{squirrel.Climbing}}</li>
+		    <li>Eating: {{squirrel.Eating}}</li>
+		    <li>Foraging: {{squirrel.Foraging}}</li>
+		    <li>Other activities: {{squirrel.Other_Activities}}</li>
+		    <li>Kuks: {{squirrel.Kuks}}</li>
+		    <li>Quaas: {{squirrel.Quaas}}</li>
+		    <li>Moans: {{squirrel.Moans}}</li>
+		    <li>Tail flags: {{squirrel.Tail_Flags}}</li>
+		    <li>Tail twitches: {{ squirrel.Tail_Twitches }}</li>
+		    <li>Approaches: {{ squirrel.Approaches }}</li>
+		    <li>Indifferent: {{ squirrel.Indifferent }}</li>
+		    <li>Runs from: {{ squirrel.Runs_From }}</li>
+	    </ol>
+	    <p><a href='{% url 'squirrel:add' Unique_Squirrel_ID=Unique_Squirrel_ID%}'> Update information</a></p>
+	    <p><a href='{% url 'squirrel:sightings'%}'> Back to sightings page</a></p>
     </body>
 </html>
