@@ -4,12 +4,12 @@ from django.shortcuts import get_object_or_404
 
 from .models import Squirrel
 
-def index(request):
+def sightings(request):
     squirrels = Squirrel.objects.all()
     context = {
             'squirrels':squirrels,
             }
-    return render(request,'squirrel/index.html',context)
+    return render(request,'squirrel/sightings.html',context)
 
 def create_squirrel(request):
     if request.method=='POST':
@@ -22,7 +22,7 @@ def create_squirrel(request):
         contect={
                 'form'=form,
                 }
-    return render(request,'sightings/create.html',context)
+    return render(request,'squirrel/create.html',context)
 
 def update_squirrel(request,Unique_Squirrel_ID):
     squirrel= Squirrel.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
@@ -36,7 +36,12 @@ def update_squirrel(request,Unique_Squirrel_ID):
     context ={
             'form':form,
              }
-    return render(request, 'sightings/update.html', context)
+    return render(request, 'squirrel/update.html', context)
+
+def stats(request):
+
+
+
 
 
 
