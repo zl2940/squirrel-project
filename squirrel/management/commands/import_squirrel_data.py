@@ -10,6 +10,7 @@ class Command(BaseCommand):
         path = options['path']
         with open(path, 'r') as f:
             squirrel_info = csv.reader(f, dialect='excel')
+            next(squirrel_info)
             for row in squirrel_info:
                 squirrel = Squirrel.objects.create(
                         Latitude=row[0]
