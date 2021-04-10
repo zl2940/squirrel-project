@@ -5,13 +5,13 @@
         <title>Add Squirrel</title>
     </head>
     <body>
-        <p>I'm some content.</p>
-        <p>
-            <ol>
-                <li>I'm a <a href="https://www.google.com">link</a>!</li>
-                <li>I'm a <a href="https://www.google.com">link</a>!</li>
-                <li>I'm a <a href="https://www.google.com">link</a>!</li>
-            </ol>
-        </p>
+        <p>Add a new squirrel</p>
+	<form method ="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<br>
+		<input type="submit" name="Submit" value="Submit">
+	</form>
     </body>
 </html>
+
