@@ -19,7 +19,7 @@ def add(request):
             return redirect('/squirrel/')
     else:
         form = SquirrelForm(request.POST)
-        contect={
+        context={
                 'form'=form,
                 }
     return render(request,'squirrel/add.html',context)
