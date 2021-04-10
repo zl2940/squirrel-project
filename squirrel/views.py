@@ -9,7 +9,7 @@ def index(request):
     context = {
             'squirrels':squirrels,
             }
-    return render(request,'squirrel/index.html',context))
+    return render(request,'squirrel/index.html',context)
 
 
 
