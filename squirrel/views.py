@@ -11,7 +11,7 @@ def sightings(request):
             }
     return render(request,'squirrel/sightings.html',context)
 
-def create_squirrel(request):
+def create(request):
     if request.method=='POST':
         form = SquirrelForm(request.POST)
         if form.is_valid():
@@ -24,7 +24,7 @@ def create_squirrel(request):
                 }
     return render(request,'squirrel/create.html',context)
 
-def update_squirrel(request,Unique_Squirrel_ID):
+def update(request,Unique_Squirrel_ID):
     squirrel= Squirrel.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method =='POST':
         form = SquirrelForm(request.POST, instance=squirrel)
