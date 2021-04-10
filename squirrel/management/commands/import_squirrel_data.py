@@ -1,5 +1,6 @@
 from django.core.management import BaseCommand,CommandError
 import csv
+import datetime
 from squirrel.models import Squirrel
 
 class Command(BaseCommand):
@@ -11,30 +12,37 @@ class Command(BaseCommand):
         with open(path, 'r') as f:
             squirrel_info = csv.reader(f, dialect='excel')
             next(squirrel_info)
+            id=list()
             for row in squirrel_info:
-                squirrel = Squirrel.objects.create(
-                        X=row[0]
-                        Y=row[1]
-                        Unique_Squirrel_ID=row[2]
-                        Shift=row[3]
-                        Date=row[4]
-                        Age=row[5]
-                        Primary_Fur_Color=row[6]
-                        Location=row[7]
-                        Specific_Location=row[8]
-                        Running=row[9]
-                        Chasing=row[10]
-                        Climbing=row[11]
-                        Eating=row[12]
-                        Foraging=row[13]
-                        Other_Activities=row[14]
-                        Kuks=row[15]
-                        Quaas=row[16]
-                        Moans=row[17]
-                        Tail_flags=row[18]
-                        Tail_twitches=row[19]
-                        Approaches=row[20]
-                        Indifferent=row[21]
-                        Runs_from=row[22])
+                if row[2] in id:
+                    continue
+                else:
+                    id.append(row[2])
+                    date = datetime.datetime.striptime(row[5],'m%d%Y')
+                    squirrel = Squirrel.objects.create(
+                        X=row[0],
+                        Y=row[1],
+                        Unique_Squirrel_ID=row[2],
+                        Shift=row[4],
+                        Date=date,
+                        Age=row[7],
+                        Primary_Fur_Color=row[8],
+                        Location=row[12],
+                        Specific_Location=row[14],
+                        Running=(row[15]==True),
+                        Chasing=(row[16]==True),
+                        Climbing=(row[17]==True),
+                        Eating=(row[18]==True),
+                        Foraging=(row[19]==True),
+                        Other_Activities=row[20],
+                        Kuks=(row[21]==True),
+                        Quaas=(row[22]==True),
+                        Moans=(row[23]==True),
+                        Tail_flags=(row[24]==True),
+                        Tail_twitches=(row[25]==True),
+                        Approaches=(row[26]==True),
+                        Indifferent=(row[27]==True),
+                        Runs_from=(row[28]==True),)
+
 
 
