@@ -5,14 +5,14 @@
         <title>Squirrels</title>
     </head>
     <body>
-	    <p><a href = '/squirrel/stats'>
-	<p><a href = '/squirrel/add'> Add a squirrel  </a></p>
-	<h1> Click on squirrel's ID to edit to update information </h1>
-	<ul>
-		{% for squirrel in squirrels %}
-		<li> <a href='/sightings/{{squirrel.Unique_Squirrel_ID}}/'> {{squirrel.Unique_Squirrel_ID}} </a> </li>
-		{% endfor %}
-	</ul>
+	    <p><a href = '/squirrel/stats'> Check statastics of squirrels </a></p>
+	    <p><a href = '/squirrel/add'> Add a squirrel  </a></p>
+	    <h1> Click on squirrel's ID to edit to update information </h1>
+	    <ul>
+		    {% for squirrel in squirrels %}
+		    <li> <a href='/sightings/{{squirrel.Unique_Squirrel_ID}}/'> {{squirrel.Unique_Squirrel_ID}} </a> </li>
+		    {% endfor %}
+	    </ul>
     </body>
 </html>
 
