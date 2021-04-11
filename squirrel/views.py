@@ -42,13 +42,13 @@ def update(request,Unique_Squirrel_ID):
 def stats(request):
     squirrels = Squirrel.objects.all()
     Total=len(squirrels)
-    Adult_count=Squirrel.objects.filter(Age="Adult").count(),
-    Juvenile_count=Squirrel.objects.filter(Age="Juvenile").count(),
+    Adult_count=Squirrel.objects.filter(Age="Adult").count()
+    Juvenile_count=Squirrel.objects.filter(Age="Juvenile").count()
     Gray_count=Squirrel.objects.filter(Primary_Fur_Color="Gray").count()
-    Cinnamon_count=Squirrel.objects.filter(Primary_Fur_Color="Cinnamon").count(),
-    Black_count=Squirrel.objects.filter(Primary_Fur_Color="Black").count(),
-    Ground_count=Squirrel.objects.filter(Location="Ground Plane").count(),
-    Above_count=Squirrel.objects.filter(Location="Above Ground").count(),
+    Cinnamon_count=Squirrel.objects.filter(Primary_Fur_Color="Cinnamon").count()
+    Black_count=Squirrel.objects.filter(Primary_Fur_Color="Black").count()
+    Ground_count=Squirrel.objects.filter(Location="Ground Plane").count()
+    Above_count=Squirrel.objects.filter(Location="Above Ground").count()
     context = {
             'Total': Total,
             'Adult_count': Adult_count,
