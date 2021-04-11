@@ -6,10 +6,10 @@ from squirrel.models import Squirrel
 class Command(BaseCommand):
     help = 'Import squirrel data'
     def add_arguments(self, parser):
-        parser.add_argument('--path', type=str)
+        parser.add_argument('path', type=str)
     def handle(self,*args,**options):
         path = options['path']
-        with open(path, 'r') as f:
+        with open(path, 'rt') as f:
             squirrel_info = csv.reader(f, dialect='excel')
             next(squirrel_info)
             id=list()
@@ -43,6 +43,5 @@ class Command(BaseCommand):
                         Approaches=(row[26]==True),
                         Indifferent=(row[27]==True),
                         Runs_from=(row[28]==True),)
-
 
 
