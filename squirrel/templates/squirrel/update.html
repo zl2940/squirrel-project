@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset=utf-8>
-        <title></title>
+        <title>Information Here:</title>
     </head>
     <body>
 	    <ol>
@@ -24,11 +24,11 @@
 		    <li>Kuks: {{squirrel.Kuks}}</li>
 		    <li>Quaas: {{squirrel.Quaas}}</li>
 		    <li>Moans: {{squirrel.Moans}}</li>
-		    <li>Tail flags: {{squirrel.Tail_Flags}}</li>
-		    <li>Tail twitches: {{ squirrel.Tail_Twitches }}</li>
+		    <li>Tail flags: {{squirrel.Tail_flags}}</li>
+		    <li>Tail twitches: {{ squirrel.Tail_twitches }}</li>
 		    <li>Approaches: {{ squirrel.Approaches }}</li>
 		    <li>Indifferent: {{ squirrel.Indifferent }}</li>
-		    <li>Runs from: {{ squirrel.Runs_From }}</li>
+		    <li>Runs from: {{ squirrel.Runs_from }}</li>
 	    </ol>
 	    <p><a href='{% url 'squirrel:add' Unique_Squirrel_ID=Unique_Squirrel_ID%}'> Update information</a></p>
 	    <p><a href='{% url 'squirrel:sightings'%}'> Back to sightings page</a></p>
