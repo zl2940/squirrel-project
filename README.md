@@ -8,4 +8,4 @@ This project allows admin to import data in csv file and export data to a new cs
 
 Group name: Project Group 43
 UNIs:[mw3452,zl2940]
-Link:https://<your project id>.appspot.com/
+Link:https://tools-for-analytics-308307.df.r.appspot.com/squirrel/
