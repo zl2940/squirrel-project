@@ -41,7 +41,7 @@
 	<h2> List of squirrels(please click on the links to update information)</h2>
 	<ul>
 		{% for squirrel in squirrels %}
-		<li> <a href='/squirrel/{{squirrel.Unique_Squirrel_ID}}/'> {{squirrel.Unique_Squirrel_ID}}{{squirrel.Date}} </a> </li>
+		<li> <a href='/squirrel/{{squirrel.Unique_Squirrel_ID}}/'> {{squirrel.Unique_Squirrel_ID}}-{{squirrel.Date}} </a> </li>
                 {% endfor %}
 	</ul>
 </div>
