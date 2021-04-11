@@ -20,8 +20,8 @@ class Command(BaseCommand):
                     id.append(row[2])
                     date = datetime.datetime.strptime(row[5],'%m%d%Y')
                     squirrel = Squirrel.objects.create(
-                        X=row[0],
-                        Y=row[1],
+                        X=float(row[0]),
+                        Y=float(row[1]),
                         Unique_Squirrel_ID=row[2],
                         Shift=row[4],
                         Date=date,
