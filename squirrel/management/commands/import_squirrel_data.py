@@ -18,7 +18,7 @@ class Command(BaseCommand):
                     continue
                 else:
                     id.append(row[2])
-                    date = datetime.datetime.striptime(row[5],'m%d%Y')
+                    date = datetime.datetime.strptime(row[5],'m%d%Y')
                     squirrel = Squirrel.objects.create(
                         X=row[0],
                         Y=row[1],
