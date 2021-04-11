@@ -5,18 +5,16 @@ from django.utils.translation import gettext as _
 
 class Squirrel(models.Model):
     X = models.DecimalField(
-            max_length=100,
             help_text=_('Longitude'),
             blank=True,
-            decimal_places=100,
+            decimal_places=15,
             max_digits=100,
             )
 
     Y = models.DecimalField(
-            max_length=100,
             help_text=_('Latitude'),
             blank=True,
-            decimal_places=100,
+            decimal_places=15,
             max_digits=100,
             )
 
