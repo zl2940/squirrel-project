@@ -13,6 +13,9 @@ import os
 
 from pathlib import Path
 
+#This is the SECRET_Key that work for local terminal
+SECRET_KEY = '#_$4p!+as4g(9_1_q7k$6upct8(3-1xh++6jt9-4$g(-429of9'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# This is the Secret Key for deployment 
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG') or '').strip().lower() in ('1', 'true')
